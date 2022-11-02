@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>DurakCardGame</title>
+		<link rel="stylesheet" href="stylegame.css">
+	</head>
+	<body onload="playgame();">
+	<h3></h3>
+	<div>Rules: <ins onclick="popup.style.display='inline-block';">Show</ins> / <ins onclick="popup.style.display='none';">Hide</ins>
+	</div>
+	<div id="rules"><ins>Starting the game:</ins><br />
+		&nbsp;&nbsp;&nbsp;&nbsp; You start the game.  When you click a card, it goes from your hand into the center.  The computer will try to play a card that has a higher rank, but the same suit as your card.  If it cannot, it will play a trump card, which is a card whose suit is stronger than all other suits.  The trump suit is seen on the last card in the deck, it is face-up.  If the computer still can't beat your card, it will take all cards on the field.<br /><br />
+		<ins>Rules:</ins><br />
+		&nbsp;&nbsp;&nbsp;&nbsp; When it is your turn, you are attacking your opponent.  Attacking is simple, you play a card for your opponent to beat.  If the opponent beats it, you can play another card for the opponent to beat IF the card is the same rank as any cards on the field.  If not, you click "End The Round", so that the computer can go, and all cards on the field go to the Beaten Cards pile.<br />
+		&nbsp;&nbsp;&nbsp;&nbsp; When the computer attacks you, you defend the same way the computer does.  If you beat the computer's card, it will try to play cards that are already on the field.  If you can't beat your opponent's cards, or don't want to, press "Take All Cards" so that the cards go to your hand.<br /><br />
+		<ins>How to Win:</ins><br />
+		&nbsp;&nbsp;&nbsp;&nbsp; After there are no cards left in the deck, the winner is the one who runs out of cards first.  The only way for a draw to happen, is if the computer plays its last card, and you have only one card left as well which can beat it.
+	</div>
+	<span style="float:right; margin-left:-85px;" id='beatencards'>Beaten Cards (0) <br /><br /></span>
+	<img style='float:right; margin-top:20px;' src="./cardimages/back-blue-75-2.png">
+	<button id="btn" onclick='roundEnd(true);'>End The Round</button>
+	<p><div id='computerHandDisplay'></div><br />
+	<div>(<span id='count'></span>)<img src="./cardimages/rotate.png">
+	<img id='trump'>
+	<span id="centerdeck"></span></div><br />
+	<div id="playerHandDisplay"></div><br /></p>
+	<p id='right'></p>
+	<script type="text/javascript" src="card.js"></script>
+	</body>
+</html>

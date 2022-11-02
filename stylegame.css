@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url("/cardimages/stolik.jpg");
+    background-position:top left;
+    background-repeat:no-repeat;
+    color: white;
+    font-weight: 900;
+}
+#btn{
+    width:120px;
+    height:120px;
+    float:right;
+    margin-right:10px;
+    border-radius:60px;
+    font-size:25px;
+    font-weight:700;
+    color: white;
+    background: red;
+}
+div img{
+    margin-left: 3px;
+}
+#trump{
+    z-index: 1;
+    position: relative;
+    left: -95px;
+    top: 8px;
+
+}
+p{
+    display: inline-block;
+    width: 45%;
+}
+#right{
+    margin-top: -200px;
+
+}
+#rules{
+    width: 500px;
+    font-size: 14pt;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    margin-top: 120px;
+    background-color:limegreen;
+    opacity:.84;
+    border-radius: 10px;
+    border-style: groove;
+    border-width: 5px;
+    font-weight: 900;
+}
+#btn:hover{
+    color: white;
+    background: blue;
+    transition: 0.6s;
+    cursor: pointer;
+}
+h3{
+    text-align: center;
+}
+@media screen and (max-width: 1080px){
+    #rules{
+        width: 50px;
+        font-size: 10pt;
+        display: none;
+        position: absolute;
+    }
+    #btn{
+        width:40px;
+        height:30px;
+        float:right;
+        margin-right:10px;
+        border-radius:60px;
+        font-size:25px;
+    }
+}
